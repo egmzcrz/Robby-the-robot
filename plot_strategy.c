@@ -39,8 +39,8 @@ int main(int argc, char const *argv[])
     }
     fprintf(gnuplot, "e\n");
     fprintf(gnuplot, "%i %i\ne\n", x, y);
-    int n = y == 0            ? WALL : room[x][y-1];
-    int s = y == ROOM_SIZE-1  ? WALL : room[x][y+1];
+    int s = y == 0            ? WALL : room[x][y-1];
+    int n = y == ROOM_SIZE-1  ? WALL : room[x][y+1];
     int w = x == 0            ? WALL : room[x-1][y];
     int e = x == ROOM_SIZE-1  ? WALL : room[x+1][y];
     int c = room[x][y];
@@ -56,8 +56,8 @@ int main(int argc, char const *argv[])
 
     switch(action)
     {
-      case UP: y += -1; break;
-      case DOWN: y+= +1; break;
+      case UP: y += +1; break;
+      case DOWN: y+= -1; break;
       case LEFT: x += -1; break;
       case RIGHT: x += +1; break;
       case CLEAN: room[x][y] = EMPTY; break;

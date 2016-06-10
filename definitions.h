@@ -65,7 +65,7 @@ for each of the 243 strategies there are 7 possible actions to take.*/
 //Number of strategies per generation.
 #define POP_SIZE 15
 //Maximum number of generations.
-#define GENERATION_MAX 2000
+#define GENERATION_MAX 20000
 //Probability to mutate.
 #define MUTATION_PROBABILITY 0.02
 
